@@ -1,4 +1,4 @@
-package org.example.Core;
+package org.example.Core.Classes;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 public class TicTacToe {
     private static final Logger LOGGER = LoggerFactory.getLogger(TicTacToe.class);
+
     private final GameBoard board;
     private final GameLogic logic;
     private char currentPlayer;

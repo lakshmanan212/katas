@@ -1,4 +1,4 @@
-package org.example.Core;
+package org.example.Core.Constants;
 
 public class Constants {
 
