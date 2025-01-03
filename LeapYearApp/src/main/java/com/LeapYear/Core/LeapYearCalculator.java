@@ -1,4 +1,4 @@
-package com.LeapYear;
+package com.LeapYear.Core;
 
 public class LeapYearCalculator {
 
