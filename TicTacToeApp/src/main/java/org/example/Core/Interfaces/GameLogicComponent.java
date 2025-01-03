@@ -1,5 +1,10 @@
 package org.example.Core.Interfaces;
 
+/**
+ * Represents the game logic operations declaration.
+ */
+
+
 public interface GameLogicComponent {
 
     boolean isWinningMove(char player);

@@ -1,5 +1,10 @@
 package org.example.Core.Interfaces;
 
+
+/**
+ * Represents the game board operation declarations.
+ */
+
 public interface GameBoardComponent {
 
     void initializeBoard();
