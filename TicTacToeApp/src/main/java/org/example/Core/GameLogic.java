@@ -1,5 +1,10 @@
 package org.example.Core;
 
+
+/**
+ * Handles game rules and winning logic for TicTacToe.
+ */
+
 public class GameLogic {
     private final GameBoard board;
 
@@ -7,6 +12,11 @@ public class GameLogic {
         this.board = board;
     }
 
+    /**
+     * Checks if the current player has won.
+     * @param player the current player's symbol.
+     * @return true if the player wins, false otherwise.
+     */
     public boolean isWinningMove(char player) {
         for (int i = 0; i < Constants.SIZE; i++) {
             if (isRowWin(i, player) || isColumnWin(i, player)) {

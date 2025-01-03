@@ -1,5 +1,8 @@
 package org.example.Core;
 
+/**
+ * Represents the game board and provides related operations.
+ */
 
 public class GameBoard {
     private final char[][] board;
@@ -9,6 +12,9 @@ public class GameBoard {
         initializeBoard();
     }
 
+    /**
+     * Initializes the board with empty values.
+     */
     private void initializeBoard() {
         for (int i = 0; i < Constants.SIZE; i++) {
             for (int j = 0; j < Constants.SIZE; j++) {
@@ -16,6 +22,10 @@ public class GameBoard {
             }
         }
     }
+
+    /**
+     * Displays the current state of the board.
+     */
 
     public void displayBoard() {
         for (int i = 0; i < Constants.SIZE; i++) {
@@ -28,6 +38,10 @@ public class GameBoard {
         }
     }
 
+    /**
+     * Checks if the board is full.
+     * @return true if full, false otherwise.
+     */
     public boolean isFull() {
         for (char[] row : board) {
             for (char cell : row) {
@@ -40,11 +54,23 @@ public class GameBoard {
     }
 
 
+    /**
+     * Places a player's move on the board.
+     * @param row the row index.
+     * @param col the column index.
+     * @param player the current player's symbol.
+     */
     public void placeMove(int row, int col, char player) {
         board[row][col] = player;
     }
 
 
+    /**
+     * Checks if a move is valid.
+     * @param row the row index.
+     * @param col the column index.
+     * @return true if valid, false otherwise.
+     */
     public boolean isMoveValid(int row, int col) {
         return row >= 0 && row < Constants.SIZE &&
                 col >= 0 && col < Constants.SIZE &&

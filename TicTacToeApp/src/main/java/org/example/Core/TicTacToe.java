@@ -6,6 +6,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 
 
+/**
+ * Main game controller class for TicTacToe.
+ */
+
 public class TicTacToe {
     private static final Logger LOGGER = LoggerFactory.getLogger(TicTacToe.class);
     private final GameBoard board;
@@ -18,6 +22,9 @@ public class TicTacToe {
         this.currentPlayer = 'X';
     }
 
+    /**
+     * Starts the game and manages the game loop.
+     */
     public void startGame() {
         LOGGER.info("Welcome to Tic-Tac-Toe!");
         try (Scanner scanner = new Scanner(System.in)) {
