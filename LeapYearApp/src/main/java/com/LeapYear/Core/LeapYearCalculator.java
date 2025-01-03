@@ -2,6 +2,12 @@ package com.LeapYear.Core;
 
 public class LeapYearCalculator {
 
+    /**
+     * Determines if a given year is a leap year.
+     * @param year The year to check.
+     * @return true if the year is a leap year, false otherwise.
+     */
+
     public static boolean isLeapYear(int year) {
         if (year % 4000 == 0) {
             return false; // Divisible by 4000
