@@ -1,5 +1,7 @@
 package org.example.Core.Classes;
 
+import org.example.Core.Interfaces.GameBoardComponent;
+import org.example.Core.Interfaces.GameLogicComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +24,13 @@ public class TicTacToe {
         this.logic = new GameLogic(board);
         this.currentPlayer = 'X';
     }
+
+    public TicTacToe(GameBoard mockBoard, GameLogic mockLogic) {
+
+        this.board = mockBoard;
+        this.logic = mockLogic;
+    }
+
 
     /**
      * Starts the game and manages the game loop.
@@ -59,7 +68,11 @@ public class TicTacToe {
         }
     }
 
-    private void togglePlayer() {
+    void togglePlayer() {
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+    }
+
+    public char getCurrentPlayer() {
+        return currentPlayer;
     }
 }
