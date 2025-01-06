@@ -15,18 +15,18 @@ public class BookStore {
     }
 
     private double calculatePriceHelper(int[] basket) {
-
+        // Base case: If no books are left, the price is 0
         if (Arrays.stream(basket).allMatch(count -> count == 0)) {
             return 0.0;
         }
 
         double minPrice = Double.MAX_VALUE;
 
-
+        // Try forming groups of 1 to 5 distinct books
         for (int groupSize = 1; groupSize <= 5; groupSize++) {
             int[] newBasket = basket.clone();
             int distinctCount = 0;
-
+            // Form a group with `groupSize` distinct books
             for (int i = 0; i < newBasket.length && distinctCount < groupSize; i++) {
                 if (newBasket[i] > 0) {
                     newBasket[i]--;
