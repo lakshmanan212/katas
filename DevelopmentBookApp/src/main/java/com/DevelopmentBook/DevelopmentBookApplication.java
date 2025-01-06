@@ -8,6 +8,10 @@ public class DevelopmentBookApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DevelopmentBookApplication.class, args);
+
+		Main main = new Main();
+		main.startDevelopmentBookApp();
+
 	}
 
 }
