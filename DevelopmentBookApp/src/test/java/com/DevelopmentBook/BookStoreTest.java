@@ -49,4 +49,26 @@ class BookStoreTest {
         assertEquals(187.5, store.calculatePrice(basket), 0.01); // 25% discount
     }
 
+
+    @Test
+    void testMixedBasket() {
+        BookStore store = new BookStore();
+        int[] basket = {2, 2, 2, 1, 1};
+        assertEquals(320.0, store.calculatePrice(basket), 0.01);
+    }
+
+    @Test
+    void testSingleBookMultipleCopies() {
+        BookStore store = new BookStore();
+        int[] basket = {4, 0, 0, 0, 0};
+        assertEquals(200.0, store.calculatePrice(basket), 0.01);
+    }
+
+    @Test
+    void testEdgeCaseAllZero() {
+        BookStore store = new BookStore();
+        int[] basket = {0, 0, 0, 0, 0};
+        assertEquals(0.0, store.calculatePrice(basket), 0.01);
+    }
+
 }
